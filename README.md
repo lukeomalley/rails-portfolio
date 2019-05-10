@@ -1,24 +1,17 @@
 # Sample Portfolio Application
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a Rails 5 application that allows users to generate their own portfolios and blogs.
 
-Things you may want to cover:
+### Features
 
-* Ruby version
-    (2.6.1)
-* System dependencies
+- Portfolio
+- Blog
+- Real-time chat engine for blog comments
 
-* Configuration
+### Code Example
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+def my_method(arguments)
+    puts arguments
+end
+```
