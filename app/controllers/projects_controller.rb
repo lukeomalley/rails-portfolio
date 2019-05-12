@@ -29,6 +29,19 @@ class ProjectsController < ApplicationController
     @project_item = Project.find(params[:id])
   end
 
+  def destroy
+    # Perform the lookup
+    @project_item = Project.find(params[:id])
+
+    # Destroy/Delete the record
+    @project_item.destroy
+
+    # Redirect after the destroy
+    respond_to do |format|
+      format.html { redirect_to projects_path, notice: 'Project was successfully destroyed.' }
+    end
+  end
+
   def update
     @project_item = Project.find(params[:id])
     respond_to do |format|

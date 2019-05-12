@@ -9,6 +9,6 @@
     <%= image_tag project_item.thumb_image unless project_item.thumb_image.nil? %>
     <br>
     <%= link_to "Edit", edit_project_path(project_item) %>
-    <%= link_to "View", project_path(project_item) %>
+    <%= link_to "Delete", project_path(project_item), method: :delete, data: { confirm: "Are you sure you want to delete #{project_item.title}?" } %>
     <hr>
 <%end%>
