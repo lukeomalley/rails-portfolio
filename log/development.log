@@ -2525,3 +2525,149 @@ Processing by ProjectsController#index as HTML
 Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/pages/home" for ::1 at 2019-05-12 11:36:39 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (2.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (42.2ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (108.9ms)
+Completed 200 OK in 167ms (Views: 81.7ms | ActiveRecord: 69.3ms)
+
+
+Started GET "/pages/about" for ::1 at 2019-05-12 11:36:54 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 11:38:40 -0400
+  
+NameError (undefined local variable or method `pages' for #<ActionDispatch::Routing::Mapper:0x00007fe4a2eafdd8>):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:3:in `<main>'
+Started GET "/" for ::1 at 2019-05-12 11:38:53 -0400
+  
+NameError (undefined local variable or method `pages' for #<ActionDispatch::Routing::Mapper:0x00007fe4a5163a78>):
+  
+config/routes.rb:10:in `block in <main>'
+config/routes.rb:3:in `<main>'
+Started GET "/" for ::1 at 2019-05-12 11:39:17 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (11.8ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (122.3ms)
+Completed 200 OK in 230ms (Views: 121.1ms | ActiveRecord: 99.9ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 11:41:15 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (61.2ms)
+Completed 200 OK in 298ms (Views: 265.3ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/about" for ::1 at 2019-05-12 11:41:28 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 11:42:25 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:5
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  Rendered pages/home.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 102ms (Views: 74.1ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/about" for ::1 at 2019-05-12 11:42:28 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 11:42:48 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (1.4ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:6
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:9
+  Rendered pages/home.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/about" for ::1 at 2019-05-12 11:42:50 -0400
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 11:45:24 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:7
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:10
+  Rendered pages/home.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 178ms (Views: 138.5ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/contact" for ::1 at 2019-05-12 11:45:29 -0400
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 11:46:01 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/luke/Desktop/dissecting-rails/Portfolio/app/views/pages/home.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...r.append=( link_to, "Projects", projects_path  );@output_buf...
+...                              ^):
+  
+app/views/pages/home.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+Started GET "/" for ::1 at 2019-05-12 11:46:20 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered pages/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 62ms (Views: 57.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-12 11:46:22 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (3.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 70ms (Views: 53.3ms | ActiveRecord: 13.1ms)
+
+
