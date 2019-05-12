@@ -3235,3 +3235,88 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 74ms (Views: 71.4ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/blogs" for ::1 at 2019-05-12 17:19:23 -0400
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (4.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 54ms (Views: 47.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/blogs" for ::1 at 2019-05-12 17:19:27 -0400
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/blogs/index.html.erb:15
+  Rendered blogs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-05-12 17:19:29 -0400
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:8
+  [1m[36mSkill Load (211.1ms)[0m  [1m[34mSELECT  "skills".* FROM "skills" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ app/views/pages/home.html.erb:11
+  Rendered pages/home.html.erb within layouts/application (251.0ms)
+Completed 200 OK in 300ms (Views: 64.0ms | ActiveRecord: 230.9ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-12 17:19:31 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 67ms (Views: 48.7ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/contact" for ::1 at 2019-05-12 17:19:33 -0400
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/projects" for ::1 at 2019-05-12 17:19:35 -0400
+Processing by ProjectsController#index as HTML
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (0.7ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:5
+  Rendered projects/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8032448616015099150)[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+Migrating to AddPostStatusToBlogs (20190512213234)
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (51.7ms)[0m  [1m[35mALTER TABLE "blogs" ADD "status" integer DEFAULT 0[0m
+  ↳ db/migrate/20190512213234_add_post_status_to_blogs.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190512213234"]]
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (13.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8032448616015099150)[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/luke/.rvm/gems/ruby-2.6.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE "blogs"."id" IS NOT NULL AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "dope-new-blog"], ["LIMIT", 1]]
+  [1m[36mBlog Create (1.1ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "dope new blog"], ["body", "this is a new blog post"], ["created_at", "2019-05-12 21:36:48.017626"], ["updated_at", "2019-05-12 21:36:48.017626"], ["slug", "dope-new-blog"]]
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" ORDER BY "blogs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Update (4.3ms)[0m  [1m[33mUPDATE "blogs" SET "status" = $1, "updated_at" = $2 WHERE "blogs"."id" = $3[0m  [["status", 1], ["updated_at", "2019-05-12 21:37:09.272406"], ["id", 13]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
