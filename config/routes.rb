@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :projects
+  resources :projects, except: [:show]
+  get 'portfolio/:id', to: 'projects#show', as: 'project_show'
 
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
