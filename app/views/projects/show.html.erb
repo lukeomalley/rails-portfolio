@@ -1,0 +1,7 @@
+<h2><%= @project_item.title %></h2>
+<%= image_tag @project_item.main_image unless @project_item.thumb_image.nil? %>
+<br>
+<em><%= @project_item.subtitle %></em>
+<p><%= @project_item.body %></p>
+
+<a href="/projects">Back</a>

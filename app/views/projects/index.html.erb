@@ -2,11 +2,13 @@
 
 <%= link_to "Create New Item", new_project_path %>
 
-<% @project_items.each do |project|%>
-    <h3><%= project.title %></h3>
-    <p><%= project.subtitle %></p>
-    <p><%= project.body %></p>
-    <%= image_tag project.thumb_image unless project.thumb_image.nil? %>
-    <%= link_to "Edit", edit_project_path(project.id) %>
+<% @project_items.each do |project_item|%>
+    <h3><%= link_to project_item.title, project_path(project_item) %></h3>
+    <p><%= project_item.subtitle %></p>
+    <p><%= project_item.body %></p>
+    <%= image_tag project_item.thumb_image unless project_item.thumb_image.nil? %>
+    <br>
+    <%= link_to "Edit", edit_project_path(project_item) %>
+    <%= link_to "View", project_path(project_item) %>
     <hr>
 <%end%>
