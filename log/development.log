@@ -4593,3 +4593,5 @@ Processing by BlogsController#index as HTML
 Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 1.4ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
