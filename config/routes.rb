@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'portfolio/:id', to: 'projects#show', as: 'project_show'
 
   get 'about', to: 'pages#about'
+  get 'angular-items', to: 'projects#angular'
   get 'contact', to: 'pages#contact'
   resources :blogs do
     member do
